@@ -187,7 +187,7 @@ function Scene({ scrollProgress }: { scrollProgress: React.MutableRefObject<numb
     if (chaosRef.current) {
       const fade = Math.max(0, 1-(s-0.32)/0.15)
       chaosRef.current.scale.setScalar(fade)
-      chaosRef.current.children.forEach((c,i) => {
+      chaosRef.current.children.forEach((c) => {
         const m = (c as THREE.Mesh).material as THREE.MeshStandardMaterial
         if (m) m.opacity = fade * 0.75
       })
@@ -215,8 +215,8 @@ function Scene({ scrollProgress }: { scrollProgress: React.MutableRefObject<numb
 
 export default function HeroCanvas({ scrollProgress }: { scrollProgress: React.MutableRefObject<number> }) {
   return (
-    <div style={{ position:'fixed', inset:0, zIndex:0 }}>
-      <Canvas camera={{ position:[0,1,8], fov:60 }} gl={{ antialias:true }} style={{ background:'#010D12' }}>
+    <div style={{ position: 'fixed', inset: 0, zIndex: 1 }}>
+      <Canvas camera={{ position: [0, 1, 8], fov: 60 }} gl={{ antialias: true, alpha: false }} style={{ background: '#010D12' }}>
         <Scene scrollProgress={scrollProgress} />
       </Canvas>
     </div>
