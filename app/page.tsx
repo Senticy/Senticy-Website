@@ -1,6 +1,7 @@
 'use client'
 import { useRef, useCallback } from 'react'
 import dynamic from 'next/dynamic'
+import MainNav from '@/components/MainNav'
 import ScrollStory from '@/components/ScrollStory'
 import StatsSection from '@/components/StatsSection'
 import CTASection from '@/components/CTASection'
@@ -15,6 +16,7 @@ export default function Home() {
   }, [])
   return (
     <main style={{ background: '#010D12' }}>
+      <MainNav />
       <HeroCanvas scrollProgress={scrollProgress} />
       <ScrollStory onScroll={handleScroll} />
       <StatsSection />
