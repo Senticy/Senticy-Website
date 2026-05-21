@@ -1,0 +1,15 @@
+.wrapper { position: absolute; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 24px; pointer-events: none; }
+.badge { display: inline-block; padding: 6px 18px; border: 1px solid rgba(9,163,178,0.4); border-radius: 20px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #09A3B2; margin-bottom: 28px; animation: fadeUp 1s ease 0.3s both; backdrop-filter: blur(4px); background: rgba(4,58,75,0.3); }
+.headline { font-size: clamp(36px, 6vw, 76px); font-weight: 700; line-height: 1.1; color: #fff; margin-bottom: 20px; animation: fadeUp 1s ease 0.6s both; letter-spacing: -2px; }
+.gradient { background: linear-gradient(90deg, #FFB800, #fb842c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.sub { font-size: clamp(14px, 1.8vw, 18px); color: rgba(255,255,255,0.45); max-width: 520px; line-height: 1.7; margin-bottom: 40px; animation: fadeUp 1s ease 0.9s both; }
+.ctas { display: flex; gap: 16px; margin-bottom: 56px; animation: fadeUp 1s ease 1.2s both; pointer-events: all; }
+.btnPrimary { background: linear-gradient(135deg, #fb842c, #FFB800); color: #010D12; border: none; padding: 14px 32px; border-radius: 6px; font-size: 14px; font-weight: 700; cursor: pointer; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 0 30px rgba(251,132,44,0.45); }
+.btnPrimary:hover { transform: translateY(-3px); box-shadow: 0 0 50px rgba(251,132,44,0.65); }
+.btnSecondary { background: transparent; color: #09A3B2; border: 1px solid rgba(9,163,178,0.5); padding: 14px 32px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+.btnSecondary:hover { background: rgba(9,163,178,0.1); border-color: #09A3B2; transform: translateY(-3px); }
+.nodes { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 600px; animation: fadeUp 1s ease 1.5s both; pointer-events: all; }
+.node { display: flex; align-items: center; gap: 7px; background: rgba(4,58,75,0.5); border: 1px solid rgba(9,163,178,0.2); border-radius: 20px; padding: 6px 14px; font-size: 12px; color: rgba(9,163,178,0.8); letter-spacing: 0.5px; backdrop-filter: blur(4px); animation: pulseFade 3s ease-in-out infinite; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: #09A3B2; box-shadow: 0 0 8px #09A3B2; flex-shrink: 0; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulseFade { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }

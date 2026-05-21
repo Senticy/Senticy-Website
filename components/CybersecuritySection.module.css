@@ -1,0 +1,22 @@
+.section { padding: 120px 48px; background: #010D12; }
+.inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.eyebrow { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #09A3B2; margin-bottom: 16px; }
+.title { font-size: clamp(28px, 3.5vw, 48px); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 24px; }
+.title span { background: linear-gradient(90deg, #09A3B2, #00D4E8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.desc { font-size: 15px; color: rgba(255,255,255,0.4); line-height: 1.8; margin-bottom: 32px; }
+.features { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.features li { font-size: 14px; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 10px; }
+.check { color: #09A3B2; font-weight: 700; }
+.terminal { background: #071E26; border: 1px solid rgba(9,163,178,0.2); border-radius: 12px; overflow: hidden; box-shadow: 0 0 80px rgba(9,163,178,0.07); }
+.terminalHeader { background: rgba(9,163,178,0.06); padding: 12px 16px; display: flex; align-items: center; gap: 6px; border-bottom: 1px solid rgba(9,163,178,0.1); }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.termTitle { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 1px; margin-left: 8px; }
+.terminalBody { padding: 20px; font-family: monospace; }
+.termLine { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 8px; line-height: 1.5; }
+.prompt { color: #09A3B2; margin-right: 8px; }
+.divider { height: 1px; background: rgba(9,163,178,0.1); margin: 16px 0; }
+.threatRow { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; padding: 8px 10px; background: rgba(255,0,0,0.04); border-radius: 6px; border: 1px solid rgba(255,80,80,0.1); }
+.threatType { font-size: 12px; color: rgba(255,255,255,0.55); flex: 1; }
+.blocked { font-size: 10px; font-weight: 700; color: #09A3B2; letter-spacing: 1px; background: rgba(9,163,178,0.1); padding: 2px 8px; border-radius: 4px; }
+.time { font-size: 11px; color: rgba(255,255,255,0.25); }
+@media (max-width: 768px) { .inner { grid-template-columns: 1fr; gap: 48px; } }

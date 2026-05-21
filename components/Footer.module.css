@@ -1,0 +1,10 @@
+.footer { background: #010D12; border-top: 1px solid rgba(9,163,178,0.07); padding: 60px 48px 24px; }
+.inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 2fr 1fr; gap: 48px; margin-bottom: 48px; align-items: start; }
+.logo { font-size: 24px; font-weight: 700; background: linear-gradient(90deg, #FFB800, #fb842c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 10px; }
+.tagline { font-size: 13px; color: rgba(255,255,255,0.25); line-height: 1.5; }
+.links { display: flex; flex-wrap: wrap; gap: 16px 32px; }
+.links a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+.links a:hover { color: #09A3B2; }
+.contact p { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 6px; }
+.bottom { text-align: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.04); }
+.bottom p { font-size: 12px; color: rgba(255,255,255,0.15); }

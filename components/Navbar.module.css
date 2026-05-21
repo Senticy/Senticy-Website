@@ -1,0 +1,8 @@
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; transition: all 0.3s ease; }
+.nav.scrolled { background: rgba(1,13,18,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(9,163,178,0.1); padding: 14px 48px; }
+.logo { font-size: 22px; font-weight: 700; background: linear-gradient(90deg, #FFB800, #fb842c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.5px; }
+.links { display: flex; gap: 36px; }
+.links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.links a:hover { color: #09A3B2; }
+.cta { background: linear-gradient(135deg, #fb842c, #FFB800); color: #010D12; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 0 20px rgba(251,132,44,0.3); }
+.cta:hover { transform: translateY(-2px); box-shadow: 0 0 35px rgba(251,132,44,0.5); }
