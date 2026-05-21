@@ -15,9 +15,14 @@ export default function Home() {
     scrollProgress.current = p
   }, [])
   return (
-    <main style={{ background: '#010D12' }}>
-      <MainNav />
+    <main style={{ background: '#010D12', position: 'relative' }}>
+      {/* Nav in its own fixed stacking context ABOVE everything */}
+      <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200, isolation: 'isolate' }}>
+        <MainNav />
+      </div>
+      {/* Canvas fills screen behind everything */}
       <HeroCanvas scrollProgress={scrollProgress} />
+      {/* Scroll content */}
       <ScrollStory onScroll={handleScroll} />
       <StatsSection />
       <CTASection />

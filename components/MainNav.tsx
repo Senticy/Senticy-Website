@@ -91,25 +91,25 @@ function DropdownItem({ item }: { item: typeof navItems[0] }) {
         onClick={() => setOpen(!open)}
         style={{
           background: 'none', border: 'none', cursor: 'pointer',
-          color: open ? '#09A3B2' : 'rgba(255,255,255,0.6)',
+          color: open ? '#09A3B2' : 'rgba(255,255,255,0.65)',
           fontSize: 14, display: 'flex', alignItems: 'center', gap: 4,
           padding: '4px 0', transition: 'color 0.2s', fontFamily: 'inherit',
         }}
         onMouseEnter={e => (e.currentTarget.style.color = '#09A3B2')}
-        onMouseLeave={e => { if (!open) e.currentTarget.style.color = 'rgba(255,255,255,0.6)' }}
+        onMouseLeave={e => { if (!open) e.currentTarget.style.color = 'rgba(255,255,255,0.65)' }}
       >
         {item.label}
-        <span style={{ fontSize: 10, transition: 'transform 0.2s', display: 'inline-block', transform: open ? 'rotate(180deg)' : 'none' }}>▾</span>
+        <span style={{ fontSize: 10, display: 'inline-block', transition: 'transform 0.2s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}>▾</span>
       </button>
 
       {open && (
         <div style={{
           position: 'absolute', top: 'calc(100% + 12px)', left: '50%',
           transform: 'translateX(-50%)',
-          background: 'rgba(4,18,24,0.98)', border: '1px solid rgba(9,163,178,0.2)',
+          background: '#010D12', border: '1px solid rgba(9,163,178,0.25)',
           borderRadius: 10, padding: '8px 0', minWidth: 220,
-          boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
-          backdropFilter: 'blur(20px)', zIndex: 200,
+          boxShadow: '0 20px 60px rgba(0,0,0,0.7)',
+          zIndex: 300,
         }}>
           {item.links.map((link, i) => (
             <Link
@@ -153,14 +153,14 @@ export default function MainNav() {
 
   return (
     <nav style={{
-      position: 'fixed', top: 0, left: 0, right: 0,
-      zIndex: 150,
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       padding: scrolled ? '12px 48px' : '18px 48px',
-      background: scrolled ? 'rgba(1,13,18,0.97)' : 'rgba(1,13,18,0.7)',
+      background: 'rgba(1,13,18,0.96)',
       backdropFilter: 'blur(20px)',
-      borderBottom: `1px solid ${scrolled ? 'rgba(9,163,178,0.15)' : 'rgba(9,163,178,0.05)'}`,
-      transition: 'all 0.3s ease',
+      WebkitBackdropFilter: 'blur(20px)',
+      borderBottom: '1px solid rgba(9,163,178,0.12)',
+      transition: 'padding 0.3s ease',
+      width: '100%',
     }}>
       <Link href="/" style={{
         fontSize: 22, fontWeight: 700,
@@ -176,7 +176,7 @@ export default function MainNav() {
       </div>
 
       <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexShrink: 0 }}>
-        <a href="tel:4243023353" style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none', transition: 'color 0.2s' }}
+        <a href="tel:4243023353" style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}
           onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
           onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
         >(424) 302-3353</a>
