@@ -14,7 +14,8 @@
     "three": "^0.164.1",
     "@react-three/fiber": "^8.16.8",
     "@react-three/drei": "^9.105.6",
-    "gsap": "^3.12.5"
+    "gsap": "^3.12.5",
+    "framer-motion": "^11.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",
