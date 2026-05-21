@@ -1,0 +1,17 @@
+.sticky { position:sticky; top:0; height:100vh; width:100%; display:flex; flex-direction:column; justify-content:flex-end; pointer-events:none; overflow:hidden; }
+.vignette { position:absolute; inset:0; pointer-events:none; z-index:0; }
+.text { position:relative; z-index:2; padding:0 8% 12vh; max-width:600px; }
+.eyebrow { font-size:11px; letter-spacing:4px; text-transform:uppercase; margin-bottom:18px; font-weight:600; }
+.headline { font-size:clamp(38px,5.5vw,72px); font-weight:700; line-height:1.08; letter-spacing:-2px; margin-bottom:22px; }
+.sub { font-size:clamp(14px,1.6vw,17px); line-height:1.8; margin-bottom:0; max-width:460px; }
+.ctas { display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin-top:36px; pointer-events:all; }
+.btnPrimary { display:inline-block; background:linear-gradient(135deg,#fb842c,#FFB800); color:#010D12; padding:15px 36px; border-radius:6px; font-size:15px; font-weight:700; text-decoration:none; transition:all 0.2s; box-shadow:0 0 40px rgba(251,132,44,0.4); }
+.btnPrimary:hover { transform:translateY(-3px); box-shadow:0 0 60px rgba(251,132,44,0.6); }
+.btnSecondary { display:inline-block; background:transparent; color:rgba(255,255,255,0.65); border:1px solid rgba(255,255,255,0.2); padding:12px 28px; border-radius:6px; font-size:14px; font-weight:600; text-decoration:none; transition:all 0.2s; }
+.btnSecondary:hover { border-color:rgba(255,255,255,0.4); color:#fff; transform:translateY(-2px); }
+.noContract { font-size:12px; color:rgba(255,255,255,0.25); letter-spacing:0.5px; margin-top:4px; }
+.dots { position:absolute; right:48px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:10px; z-index:3; }
+.dot { width:6px; height:6px; border-radius:50%; transition:all 0.3s; }
+.scrollHint { position:absolute; bottom:40px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; font-size:10px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.3); animation:bounce 2s ease-in-out infinite; z-index:3; }
+.scrollLine { width:1px; height:40px; background:linear-gradient(to bottom,rgba(9,163,178,0.7),transparent); }
+@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
